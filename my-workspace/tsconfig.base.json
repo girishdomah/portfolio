@@ -1,14 +1,11 @@
 {
   "compilerOptions": {
-    "composite": true,
     "declarationMap": true,
-    "emitDeclarationOnly": true,
     "importHelpers": true,
     "isolatedModules": true,
-    "lib": ["es2022"],
-    "module": "nodenext",
-    "moduleResolution": "nodenext",
-    "noEmitOnError": true,
+    "lib": ["es2022", "dom"],
+    "module": "esnext",
+    "moduleResolution": "bundler",
     "noFallthroughCasesInSwitch": true,
     "noImplicitOverride": true,
     "noImplicitReturns": true,
@@ -16,8 +13,9 @@
     "skipLibCheck": true,
     "strict": true,
     "target": "es2022",
-    "customConditions": ["@org/source"],
     "noUncheckedSideEffectImports": false,
-    "types": ["*"]
+    "paths": {
+      "@org/ui": ["./packages/ui/src/index.ts"]
+    }
   }
 }
